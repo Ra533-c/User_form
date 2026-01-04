@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit the file</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+    <div class="w-full min-h-screen bg-zinc-900">
+        <div class="form p-10 text-white mx-auto">
+            <form action="/edit/<%= title %>.txt?_method=PUT" method="POST">
+                <input class="w-full rounded-md outline-none block px-5 py-2 bg-zinc-800 mt-2" type="text"
+                    placeholder="Title goes here" name="title" value="<%= title %>">
+                <textarea class="w-full rounded-md outline-none block px-5 py-2 bg-zinc-800 resize-none mt-2"
+                    name="details" id="" placeholder="write your tasks dets here"><%= details %></textarea>
+                <input class="mt-2 bg-yellow-500 text-white hover:bg-yellow-600 px-5 py-2 rounded-md font-bold"
+                    type="submit" value="Edit">
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>
